@@ -8,17 +8,20 @@
 
 hanaa = User.create(first_name: "Hanaa", last_name: "Sadoqi", username: "hsadoqi", password: "hello")
 steven = User.create(first_name: "Steven", last_name: "Paulino", username: "spaulino", password: "hello")
+arren = User.create(first_name: "Arren", last_name: "Alexander", username: "aalexander", password: "hello")
+cristina = User.create(first_name: "Cristina", last_name: "Murillo", username: "cmurillo", password: "hello")
+helen = User.create(first_name: "Helen", last_name: "Liutongco", username: "hliutongco", password: "hello")
 
-first_image = Image.create(caption: 'Hello', img: "whats up", poster: hanaa)
-second_image = Image.create(caption: 'Hello', img: "whats up", poster: hanaa)
-third_image = Image.create(caption: 'Hello', img: "whats up", poster: steven)
+first_image = Image.create(caption: 'Hello', img: "https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg", poster: hanaa)
+second_image = Image.create(caption: 'Ya like it?', img: "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350", poster: hanaa)
+third_image = Image.create(caption: 'Whats up', img: "https://www.w3schools.com/w3css/img_lights.jpg", poster: steven)
 
 Like.create(like_count: 1, liker: hanaa, image: first_image)
 Like.create(like_count: 1, liker: steven, image: first_image)
-Like.create(like_count: 1, liker: steven, image: second_image)
+Like.create(like_count: 1, liker: helen, image: second_image)
 Like.create(like_count: 1, liker: steven, image: third_image)
 
-Comment.create(content: "Hello", commenter: hanaa, image: second_image)
-Comment.create(content: "Hello", commenter: steven, image: first_image)
-Comment.create(content: "Hello", commenter: hanaa, image: third_image)
-Comment.create(content: "Hello", commenter: hanaa, image: first_image)
+Comment.create(content: "Great image", commenter: hanaa, image: second_image)
+Comment.create(content: "Perfect eye", commenter: steven, image: first_image)
+Comment.create(content: "It's lit", commenter: arren, image: third_image)
+Comment.create(content: "Yeah", commenter: hanaa, image: first_image)
