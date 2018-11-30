@@ -17,26 +17,31 @@ ActiveRecord::Schema.define(version: 2018_11_30_163205) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
-    t.integer "follower_id"
-    t.integer "image_id"
+    t.bigint "commenter_id"
+    t.bigint "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["commenter_id"], name: "index_comments_on_commenter_id"
+    t.index ["image_id"], name: "index_comments_on_image_id"
   end
 
   create_table "images", force: :cascade do |t|
     t.string "caption"
     t.string "img"
-    t.integer "poster_id"
+    t.bigint "poster_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["poster_id"], name: "index_images_on_poster_id"
   end
 
   create_table "likes", force: :cascade do |t|
     t.integer "like_count"
-    t.integer "follower_id"
-    t.integer "image_id"
+    t.bigint "liker_id"
+    t.bigint "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["image_id"], name: "index_likes_on_image_id"
+    t.index ["liker_id"], name: "index_likes_on_liker_id"
   end
 
   create_table "users", force: :cascade do |t|

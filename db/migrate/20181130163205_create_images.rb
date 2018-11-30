@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
     create_table :images do |t|
       t.string :caption
       t.string :img
-      t.integer :poster_id
+      t.references :poster
 
       t.timestamps
     end
