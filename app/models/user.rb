@@ -11,4 +11,6 @@ class User < ApplicationRecord
     has_many :comments_made, through: :comments, source: :image
     has_many :commenters, -> {distinct}, through: :comments_made
 
+    
+
 end
