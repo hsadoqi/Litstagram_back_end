@@ -14,7 +14,10 @@ helen = User.create(first_name: "Helen", last_name: "Liutongco", username: "hliu
 
 first_image = Image.create(caption: 'Hello', img: "https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg", poster: hanaa)
 second_image = Image.create(caption: 'Ya like it?', img: "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350", poster: hanaa)
-third_image = Image.create(caption: 'Whats up', img: "https://www.w3schools.com/w3css/img_lights.jpg", poster: steven)
+third_image = Image.create(caption: 'Whats up', img: "https://www.w3schools.com/w3css/img_lights.jpg", poster: hanaa)
+fourth_image = Image.create(caption: 'Hello', img: "https://wallpaperbrowse.com/media/images/soap-bubble-1958650_960_720.jpg", poster: hanaa)
+fifth_image = Image.create(caption: 'Ya like it?', img: "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=beautiful-blur-bright-326055.jpg&fm=jpg", poster: hanaa)
+sixth_image = Image.create(caption: 'Whats up', img: "https://static.toiimg.com/img/62355428/Master.jpg", poster: hanaa)
 
 Like.create(like_count: 1, liker: hanaa, image: first_image)
 Like.create(like_count: 1, liker: steven, image: first_image)
