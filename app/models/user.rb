@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+    has_secure_password
+
     has_many :posts, foreign_key: :poster, class_name: "Image"
     has_many :posters, -> {distinct}, through: :posts 
 
