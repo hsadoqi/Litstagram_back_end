@@ -16,7 +16,7 @@ class ImagesController < ApplicationController
     # POST /images
     def create
         @image = Image.create(image_params)
-          byebug
+        #   byebug
         if @image.valid?
           # byebug
           render json: @image
