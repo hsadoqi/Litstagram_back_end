@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-hanaa = User.create(first_name: "Hanaa", last_name: "Sadoqi", username: "hsadoqi", password: "hello")
-steven = User.create(first_name: "Steven", last_name: "Paulino", username: "spaulino", password: "hello")
-arren = User.create(first_name: "Arren", last_name: "Alexander", username: "aalexander", password: "hello")
-cristina = User.create(first_name: "Cristina", last_name: "Murillo", username: "cmurillo", password: "hello")
-helen = User.create(first_name: "Helen", last_name: "Liutongco", username: "hliutongco", password: "hello")
+hanaa = User.create(fullname: 'Hanaa Sadoqi', username: "hsadoqi", password: "hello")
+steven = User.create(fullname: "Steven Paulino",  username: "spaulino", password: "hello")
+arren = User.create(fullname: "Arren Alexander", username: "aalexander", password: "hello")
+cristina = User.create(fullname: "Cristina Murillo", username: "cmurillo", password: "hello")
+helen = User.create(fullname: "Helen Liutongco", username: "hliutongco", password: "hello")
 
 first_image = Image.create(caption: 'Hello', img: "https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg", poster: hanaa)
 second_image = Image.create(caption: 'Ya like it?', img: "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350", poster: hanaa)

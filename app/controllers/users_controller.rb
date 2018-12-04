@@ -15,11 +15,11 @@ class UsersController < ApplicationController
 
     # POST /users
     def create 
-        @user = User.new(user_params)
-        if @user.save 
-            render json: @user 
+        @user = User.create(user_params)
+        if @user.valid? 
+            render json: {id: @user.id, fullname: @user.fullname, username: @user.username}
         else 
-            render json: @user.errors.full_messages 
+            render json: {error: 'WRONG'}, status: 422
         end 
     end 
 
@@ -44,6 +44,6 @@ class UsersController < ApplicationController
     end 
 
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :username, :password)
+        params.require(:user).permit(:fullname, :username, :password)
     end
 end
