@@ -16,7 +16,6 @@ class UsersController < ApplicationController
     # POST /users
     def create 
         @user = User.create(user_params)
-        # byebug
         if @user.valid? 
             render json: {id: @user.id, fullname: @user.fullname, username: @user.username}
         else 
