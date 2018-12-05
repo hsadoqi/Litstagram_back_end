@@ -15,9 +15,10 @@ class CommentsController < ApplicationController
 
     # POST /comments
     def create 
-        @comment = Comment.new(comment_params)
-        if @comment.save 
-            render json: @comment 
+        @comment = Comment.create(comment_params)
+        # byebug
+        if @comment.valid? 
+            render json: {id: @comment.id, content: @comment.content, commenter_id: @comment.commenter_id, image_id: @comment.image_id}
         else 
             render json: @comment.errors.full_messages 
         end 
@@ -44,6 +45,6 @@ class CommentsController < ApplicationController
     end 
 
     def comment_params
-        params.require(:comment).permit(:content)
+        params.require(:comment).permit(:content, :commenter_id, :image_id)
     end
 end
